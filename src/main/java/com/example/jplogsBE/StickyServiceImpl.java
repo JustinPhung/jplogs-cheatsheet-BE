@@ -46,4 +46,13 @@ public class StickyServiceImpl implements StickyService {
         ));
         return stickies;
     }
+
+    @Override
+    public void deleteSticky(String uuid) {
+        stickyRepository.findAll().forEach(stickyJpa ->{
+            if(stickyJpa.getUuid().equals(uuid)){
+                stickyRepository.delete(stickyJpa);
+            }
+        });
+    }
 }

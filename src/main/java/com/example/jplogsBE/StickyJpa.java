@@ -26,6 +26,9 @@ public class StickyJpa {
         this.used = used;
     }
 
+    public StickyJpa(){
+    }
+
     public String getUuid() {
         return this.uuid;
     }
