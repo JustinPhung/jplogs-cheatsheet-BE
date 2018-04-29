@@ -1,4 +1,4 @@
-package com.example.jplogsBE;
+package com.example.jplogsBE.Sticky;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

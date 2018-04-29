@@ -13,6 +13,7 @@ public class JplogsBeApplication {
 		final FilterRegistrationBean registrationBean = new FilterRegistrationBean();
 		registrationBean.setFilter(new JwtFilter());
 		registrationBean.addUrlPatterns("/stickies/secure/*");
+		registrationBean.addUrlPatterns("/todos/secure/*");
 
 		return registrationBean;
 	}

@@ -1,4 +1,4 @@
-package com.example.jplogsBE;
+package com.example.jplogsBE.Sticky;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

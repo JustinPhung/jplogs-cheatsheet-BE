@@ -1,4 +1,4 @@
-package com.example.jplogsBE;
+package com.example.jplogsBE.Sticky;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -8,31 +8,32 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.ServletException;
-import javax.xml.ws.Response;
 import java.util.Date;
 import java.util.List;
 
 @Slf4j
 @RestController
-@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/stickies")
 public class StickyResource {
 
     @Autowired
     private StickyService stickyService;
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @RequestMapping(value = "/getStickies", method = RequestMethod.GET, produces = "application/json")
     public @ResponseBody
     List<StickyDTO> getStickies(){
         return stickyService.getStickies();
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @RequestMapping(value = "/getStickiesTest", method = RequestMethod.GET, produces = "application/json")
     public @ResponseBody
     void getStickiesTest(){
         System.out.println("Hello World");
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @RequestMapping(value = "/secure/addSticky", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody
     String addSticky(@RequestBody StickyDTO stickyDTO ){
@@ -55,6 +56,7 @@ public class StickyResource {
         return "successful";
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @RequestMapping(value = "/authenticate", method = RequestMethod.POST)
     public String login(@RequestBody String  key) throws ServletException {
 
