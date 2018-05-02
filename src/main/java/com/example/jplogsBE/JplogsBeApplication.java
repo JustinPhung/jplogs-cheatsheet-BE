@@ -14,6 +14,7 @@ public class JplogsBeApplication {
 		registrationBean.setFilter(new JwtFilter());
 		registrationBean.addUrlPatterns("/stickies/secure/*");
 		registrationBean.addUrlPatterns("/todos/secure/*");
+		registrationBean.addUrlPatterns("/diary/secure/*");
 
 		return registrationBean;
 	}
